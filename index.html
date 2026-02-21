@@ -14,13 +14,25 @@ color: #333;
 background: #f9f9f9;
 }
 header {
-background: #2c3e50;
+background-image: url('deck-stairs.jpg'); /* <-- CHANGE THIS to your exact uploaded filename, e.g., deck-project.jpg */
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 color: white;
 text-align: center;
-padding: 60px 20px;
+padding: 120px 20px; /* Increased padding for bigger header */
+position: relative;
 }
-header h1 { margin: 0; font-size: 2.8em; }
-header p { font-size: 1.3em; margin: 10px 0; }
+header::before { /* Dark overlay for better text visibility */
+content: '';
+position: absolute;
+top: 0; left: 0; right: 0; bottom: 0;
+background: rgba(0, 0, 0, 0.45); /* Adjust darkness: 0.5 = medium dark */
+z-index: 1;
+}
+header > * { position: relative; z-index: 2; } /* Keep text above overlay */
+header h1 { margin: 0; font-size: 3.2em; }
+header p { font-size: 1.5em; margin: 15px 0; }
 .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 section { margin-bottom: 50px; }
 h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
@@ -29,13 +41,16 @@ ul li { background: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box
 .contact { text-align: center; background: #3498db; color: white; padding: 40px 20px; border-radius: 8px; }
 .contact a { color: #fff; text-decoration: underline; font-weight: bold; }
 footer { text-align: center; padding: 20px; background: #2c3e50; color: white; font-size: 0.9em; }
-@media (max-width: 768px) { header h1 { font-size: 2.2em; } }
+@media (max-width: 768px) {
+header h1 { font-size: 2.5em; }
+header { padding: 80px 20px; }
+}
 </style>
 </head>
 <body>
 <header>
 <h1>Precision Coatings LLC</h1>
-<p>Quality Painting & Residential Remodels in the Greater Puget Sound Area</p>
+<p>Quality Commercial & Residential Painting + Remodels in the Greater Puget Sound Area</p>
 </header>
 
 <div class="container">
@@ -44,9 +59,9 @@ footer { text-align: center; padding: 20px; background: #2c3e50; color: white; f
 <ul>
 <li><strong>Commercial Painting</strong> – Professional finishes for offices, retail spaces, warehouses, and more. Durable coatings built for high-traffic areas.</li>
 <li><strong>Residential Painting</strong> – Interior and exterior home painting with attention to detail, color consultation, and premium materials for lasting results.</li>
-<li><strong>Residential Remodels</strong> – Full or partial home updates, including drywall repair, trim work, cabinet refinishing, and custom remodeling projects.</li>
+<li><strong>Residential Remodels</strong> – Full or partial home updates, including drywall repair, trim work, cabinet refinishing, deck & outdoor projects, and custom remodeling.</li>
 </ul>
-<p>We serve the greater Puget Sound region, including Bellevue, Seattle, Tacoma, Everett, and surrounding areas. Free estimates and consultations available!</p>
+<p>We proudly serve Bellevue, Seattle, Tacoma, Everett, and the entire greater Puget Sound region. Free estimates and consultations available!</p>
 </section>
 
 <section class="contact">
@@ -60,14 +75,12 @@ footer { text-align: center; padding: 20px; background: #2c3e50; color: white; f
 <section>
 <h2>Why Choose Precision Coatings?</h2>
 <p>With years of experience in the Puget Sound area, we deliver reliable, high-quality work on time and within budget. Fully licensed and insured for your peace of mind.</p>
-<p>Coming soon: Project gallery, testimonials, and more details.</p>
+<p>Coming soon: Project gallery (including recent deck & stair work), testimonials, and more details.</p>
 </section>
 </div>
 
 <footer>
-<p>&copy; 2026 Precision Coatings LLC | Serving Greater Puget Sound | All Rights Reserved</p>
+<p>© 2026 Precision Coatings LLC | Serving Greater Puget Sound | All Rights Reserved</p>
 </footer>
-</body>
-</html> more details, services, gallery, and quotes coming!</em></p>
 </body>
 </html>
