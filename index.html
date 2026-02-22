@@ -12,15 +12,15 @@ padding: 0;
 line-height: 1.6;
 color: #333;
 background: #f9f9f9;
-} 
+}
 header {
-background-image: url('cover photo.PNG'); /* <-- CHANGE THIS to your exact uploaded filename, e.g., deck-project.jpg */
+background-image: url('deck-stairs.jpg'); /* <-- CHANGE THIS to your exact uploaded filename, e.g., deck-project.jpg */
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 color: white;
 text-align: center;
-padding: 200px 20px; /* Increased padding for bigger header */
+padding: 120px 20px; /* Increased padding for bigger header */
 position: relative;
 }
 header::before { /* Dark overlay for better text visibility */
@@ -33,7 +33,7 @@ z-index: 1;
 header > * { position: relative; z-index: 2; } /* Keep text above overlay */
 header h1 { margin: 0; font-size: 3.2em; }
 header p { font-size: 1.5em; margin: 15px 0; }
-.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px } 
+.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 section { margin-bottom: 50px; }
 h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
 ul { list-style: none; padding: 0; }
@@ -48,52 +48,12 @@ header { padding: 80px 20px; }
 </style>
 </head>
 <body>
-<details>
+<header>
 <h1>Precision Coatings LLC</h1>
 <p>Quality Commercial & Residential Painting + Remodels in the Greater Puget Sound Area</p>
 </header>
 
-<section>
-<h2>Project Gallery</h2>
-<p>Explore some of our recent commercial and residential painting, plus remodel projects in the greater Puget Sound area. Click each category to view photos.</p>
-
-<details open> <!-- 'open' makes Decks start expanded by default -->
-<summary>Decks & Outdoor Remodels</summary>
-<div style="display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0;">
-<!-- Replace src with your actual filenames -->
-<img src="deck.JPG" alt="Deck stairs with black railing and wood finish" style="max-width: 320px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-<img src="blue deck.jpg" alt="Complete wooden deck overlooking area" style="max-width: 320px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-<!-- Add 2–4 more <img> tags here as you upload photos -->
-</div>
-</details>
-
-<details>
-<summary>Residential Painting</summary>
-<div style="display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0;">
-<img src="3 story.jpg" alt="Freshly painted residential living room" style="max-width: 320px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-<img src="green house.jpg" alt="Exterior home painted in neutral tones" style="max-width: 320px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-<!-- Add your own photos here -->
-</div>
-</details>
-
-<details>
-<summary>Commercial Painting</summary>
-<div style="display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0;">
-<img src="orion.jpg" alt="Modern commercial office space painted" style="max-width: 320px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-<!-- Add commercial shots -->
-</div>
-</details>
-
-<details>
-<summary>Remodel Projects</summary>
-<div style="display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0;">
-<!-- Add remodel before/after if you have them -->
-<img src="commercial 2.jpg" alt="Residential kitchen remodel with new paint" style="max-width: 320px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
-</div>
-</details>
-
-<p style="text-align: center; margin-top: 30px; font-style: italic;">More projects coming soon – send us your ideas for a free quote!</p>
-</section>
+<div class="container">
 <section>
 <h2>Our Services</h2>
 <ul>
