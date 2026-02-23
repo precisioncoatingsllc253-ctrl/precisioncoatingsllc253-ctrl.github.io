@@ -14,23 +14,26 @@ color: #333;
 background: #f9f9f9;
 }
 header {
-background-image: url('cover photo.PNG'); /* <-- CHANGE THIS to your exact uploaded filename, e.g., deck-project.jpg */
+background-image: url('cover photo.PNG'); /* CHANGE THIS if you want a different header image */
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
 color: white;
 text-align: center;
-padding: 120px 20px; /* Increased padding for bigger header */
+padding: 120px 20px;
 position: relative;
 }
-header::before { /* Dark overlay for better text visibility */
+header::before {
 content: '';
 position: absolute;
 top: 0; left: 0; right: 0; bottom: 0;
-background: rgba(0, 0, 0, 0.45); /* Adjust darkness: 0.5 = medium dark */
+background: rgba(0, 0, 0, 0.45);
 z-index: 1;
 }
-header > * { position: relative; z-index: 2; } /* Keep text above overlay */
+header > * {
+position: relative;
+z-index: 2;
+}
 header h1 { margin: 0; font-size: 3.2em; }
 header p { font-size: 1.5em; margin: 15px 0; }
 .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
@@ -41,6 +44,24 @@ ul li { background: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box
 .contact { text-align: center; background: #3498db; color: white; padding: 40px 20px; border-radius: 8px; }
 .contact a { color: #fff; text-decoration: underline; font-weight: bold; }
 footer { text-align: center; padding: 20px; background: #2c3e50; color: white; font-size: 0.9em; }
+
+.gallery {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 15px;
+margin-top: 20px;
+}
+.gallery img {
+width: 100%;
+height: auto;
+border-radius: 8px;
+box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+transition: transform 0.3s;
+}
+.gallery img:hover {
+transform: scale(1.03);
+}
+
 @media (max-width: 768px) {
 header h1 { font-size: 2.5em; }
 header { padding: 80px 20px; }
@@ -54,8 +75,6 @@ header { padding: 80px 20px; }
 </header>
 
 <div class="container">
-<section>
-
 <section class="contact">
 <h2>Get in Touch Today</h2>
 <p>Ready for a fresh look or remodel? Contact us for a no-obligation quote.</p>
@@ -67,7 +86,16 @@ header { padding: 80px 20px; }
 <section>
 <h2>Why Choose Precision Coatings?</h2>
 <p>With years of experience in the Puget Sound area, we deliver reliable, high-quality work on time and within budget. Fully licensed and insured for your peace of mind.</p>
-<p>Coming soon: Project gallery (including recent deck & stair work), testimonials, and more details.</p>
+
+<h3>Recent Projects</h3>
+<div class="gallery">
+<img src="commercial.jpg" alt="Commercial" loading="lazy">
+<img src="interior paint 3.jpg" alt="Interior house paint" loading="lazy">
+<img src="stain better photo.jpg" alt="Stain" loading="lazy">
+<img src="lakewood pre painted.png" alt="Commercial storefront" loading="lazy">
+<!-- Add more lines like this if you have extra photos:
+<img src="your-new-photo.jpg" alt="Description of this project" loading="lazy"> -->
+</div>
 </section>
 </div>
 
@@ -76,6 +104,5 @@ header { padding: 80px 20px; }
 </footer>
 </body>
 </html>
-</footer>
 </body>
 </html>
