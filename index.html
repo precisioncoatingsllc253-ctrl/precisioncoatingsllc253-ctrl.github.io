@@ -14,7 +14,7 @@ color: #333;
 background: #f9f9f9;
 }
 header {
-background-image: url('cover photo.PNG'); /* CHANGE THIS if you want a different header image */
+background-image: url('cover photo.PNG');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -36,6 +36,18 @@ z-index: 2;
 }
 header h1 { margin: 0; font-size: 3.2em; }
 header p { font-size: 1.5em; margin: 15px 0; }
+.logo-container {
+text-align: center;
+padding: 30px 20px;
+background: white;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.logo-container img {
+max-width: 350px;
+height: auto;
+display: block;
+margin: 0 auto;
+}
 .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 section { margin-bottom: 50px; }
 h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
@@ -65,6 +77,7 @@ transform: scale(1.03);
 @media (max-width: 768px) {
 header h1 { font-size: 2.5em; }
 header { padding: 80px 20px; }
+.logo-container img { max-width: 250px; }
 }
 </style>
 </head>
@@ -73,6 +86,10 @@ header { padding: 80px 20px; }
 <h1>Precision Coatings LLC</h1>
 <p>Quality Commercial & Residential Painting + Remodels in the Greater Puget Sound Area</p>
 </header>
+
+<div class="logo-container">
+<img src="logo.png" alt="Precision Coatings LLC Logo">
+</div>
 
 <div class="container">
 <section class="contact">
@@ -85,22 +102,4 @@ header { padding: 80px 20px; }
 
 <section>
 <h2>Why Choose Precision Coatings?</h2>
-<p>With years of experience in the Puget Sound area, we deliver reliable, high-quality work on time and within budget. Fully licensed and insured for your peace of mind.</p>
-
-<h3>Recent Projects</h3>
-<div class="gallery">
-<img src="commercial.jpg" alt="Commercial" loading="lazy">
-<img src="custom matt scott.jpg" alt="Commercial storefront" loading="lazy">
-<img src="stain better photo.jpg" alt="Stain" loading="lazy">
-<img src="lakewood pre painted.png" alt="Commercial storefront" loading="lazy">
-<img src="orion.jpg" alt="Commercial storefront" loading="lazy"><!-- Add more lines like this if you have extra photos:
-<img src="your-new-photo.jpg" alt="Description of this project" loading="lazy"> -->
-</div>
-</section>
-</div>
-
-<footer>
-<p>© 2026 Precision Coatings LLC | Serving Greater Puget Sound | All Rights Reserved</p>
-</footer>
-</body>
-</html>
+<p>With years of experience in the Puget Sound area, we deliver reliable
