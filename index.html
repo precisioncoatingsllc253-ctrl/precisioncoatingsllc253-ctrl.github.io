@@ -30,15 +30,24 @@ top: 0; left: 0; right: 0; bottom: 0;
 background: rgba(0, 0, 0, 0.45);
 z-index: 1;
 }
-header > * {
+header {
+background-image: url('cover photo.PNG');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+text-align: center;
+padding: 10px 20px; /* Tiny top padding */
 position: relative;
-z-index: 2;
 }
 header h1 {
 margin: 0;
 font-size: 3.2em;
-color: #0033A0; /* Changed to navy blue */
-padding-top: 240px; /* Pushes it closer to the top */
+color: #0033A0;
+position: absolute;
+top: 5px; /* Right at the top */
+left: 50%;
+transform: translateX(-50%);
+z-index: 3; /* Above overlay */
 }
 header p {
 font-size: 1.5em;
