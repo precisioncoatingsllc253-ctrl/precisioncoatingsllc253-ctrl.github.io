@@ -14,13 +14,13 @@ color: #333;
 background: #f9f9f9;
 }
 header {
-background-image: url('cover photo.PNG'); /* CHANGE THIS if you want a different header image */
+background-image: url('cover photo.PNG');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
-color: white;
+color: white; /* Keep this for the p tag */
 text-align: center;
-padding: 120px 20px;
+padding: 80px 20px 120px; /* Reduced top padding, kept bottom for spacing */
 position: relative;
 }
 header::before {
@@ -34,8 +34,16 @@ header > * {
 position: relative;
 z-index: 2;
 }
-header h1 { margin: 0; font-size: 3.2em; }
-header p { font-size: 1.5em; margin: 15px 0; }
+header h1 {
+margin: 0;
+font-size: 3.2em;
+color: #0033A0; /* Changed to navy blue */
+padding-top: 20px; /* Pushes it closer to the top */
+}
+header p {
+font-size: 1.5em;
+margin: 15px 0;
+}
 .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 section { margin-bottom: 50px; }
 h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
@@ -63,8 +71,11 @@ transform: scale(1.03);
 }
 
 @media (max-width: 768px) {
-header h1 { font-size: 2.5em; }
-header { padding: 80px 20px; }
+header h1 {
+font-size: 2.5em;
+padding-top: 15px; /* Slightly less on smaller screens */
+}
+header { padding: 60px 20px 100px; } /* Adjusted for mobile */
 }
 </style>
 </head>
@@ -93,8 +104,7 @@ header { padding: 80px 20px; }
 <img src="custom matt scott.jpg" alt="Commercial storefront" loading="lazy">
 <img src="stain better photo.jpg" alt="Stain" loading="lazy">
 <img src="lakewood pre painted.png" alt="Commercial storefront" loading="lazy">
-<img src="orion.jpg" alt="Commercial storefront" loading="lazy"><!-- Add more lines like this if you have extra photos:
-<img src="your-new-photo.jpg" alt="Description of this project" loading="lazy"> -->
+<img src="orion.jpg" alt="Commercial storefront" loading="lazy">
 </div>
 </section>
 </div>
