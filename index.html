@@ -18,12 +18,12 @@ background-image: url('cover photo.PNG');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
+color: white; /* Keep this for the p tag */
 text-align: center;
-padding: 150px 20px 100px; /* Tall top space for big image feel, bottom space for breathing room */
+padding: 80px 20px 120px; /* Reduced top padding, kept bottom for spacing */
 position: relative;
-min-height: 400px; /* Ensures header stays tall even if content is small – adjust to taste (300–600px) */
 }
-header::before { /* Your dark overlay – unchanged */
+header::before {
 content: '';
 position: absolute;
 top: 0; left: 0; right: 0; bottom: 0;
@@ -37,17 +37,12 @@ z-index: 2;
 header h1 {
 margin: 0;
 font-size: 3.2em;
-color: #0033A0; /* Blue – good */
-position: absolute;
-top: 20px; /* Distance from very top edge – tweak this: 10px super high, 40px a bit lower */
-left: 50%;
-transform: translateX(-50%);
-z-index: 3; /* Above overlay */
-width: 90%; /* Prevents overflow on edges */
+color: #0033A0; /* Changed to navy blue */
+padding-top: 240px; /* Pushes it closer to the top */
 }
 header p {
 font-size: 1.5em;
-margin: 120px 0 0; /* Pushes tagline down below the absolute title – adjust if needed */
+margin: 5px 0;
 }
 .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 section { margin-bottom: 50px; }
