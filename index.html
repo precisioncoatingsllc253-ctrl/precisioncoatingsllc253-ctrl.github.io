@@ -49,7 +49,15 @@ z-index: 3; /* Keeps it above the overlay */
 }
 header p {
 font-size: 1.5em;
-margin: 5px 0;
+margin: 0;
+position: absolute;
+bottom: 60px; /* Pulls it near the bottom—tweak to 40px or 80px if needed */
+left: 50%;
+transform: translateX(-50%); /* Centers it */
+text-shadow: 0 2px 6px rgba(0,0,0,0.8); /* Stronger shadow for contrast */
+z-index: 3;
+max-width: 90%; /* Prevents overflow on mobile */
+text-align: center;
 }
 .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 section { margin-bottom: 50px; }
