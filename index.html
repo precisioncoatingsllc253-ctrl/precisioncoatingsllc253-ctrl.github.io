@@ -88,38 +88,30 @@ transform: scale(1.03);
 header {
 height: 50vh;
 min-height: 300px;
-padding-top: 0;
+padding-top: 0; /* No extra space at top */
 }
 header h1 {
 position: absolute;
-top: 0;
-left: 0;
-transform: none;
+top: 0; /* Right at the top—no gap */
+left: 0; /* Flush left—change to 50% if you still want centered */
+transform: none; /* No centering shift */
 margin: 0;
-padding: 12px 20px;
-font-size: 2.4em;
+padding: 12px 20px; /* Side padding so it doesn't hug edges */
+font-size: 2.0em; /* Readable but not overwhelming */
 color: #4A2F1B;
-background: rgba(255,255,255,0.25);
-border-radius: 0 0 12px 12px;
+background: rgba(255,255,255,0.25); /* Light semi-transparent bar—helps pop without blocking photo */
+border-radius: 0 0 12px 12px; /* Rounded bottom corners for polish */
 text-shadow: 0 0 10px rgba(255,255,255,0.8),
-0 0 20px rgba(74,47,27,0.4);
+0 0 20px rgba(74,47,27,0.4); /* Glow stays */
 z-index: 3;
 white-space: nowrap;
 }
 header p {
-position: static; /* Pulls it out of absolute positioning—no more floating */
-display: block; /* Makes it full-width */
-margin: 0 auto;
-padding: 20px 15px;
-font-size: 1.1em; /* Smaller, clean */
-color: #333; /* Matches body text—readable on white */
-text-align: center;
-text-shadow: none; /* No glow needed down here */
-background: none; /* No overlay */
-bottom: auto; /* Forget the bottom position */
-left: auto;
-transform: none;
-max-width: 100%;
+font-size: 1.3em;
+bottom: 40px; /* Tagline stays lower—doesn't fight */
+left: 50%;
+transform: translateX(-50%);
+max-width: 90%;
 }
 }
  
