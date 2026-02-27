@@ -16,11 +16,11 @@ background: #f9f9f9;
 
 /* Links - match muted orange theme */
 a {
-color: #D47E30;
+color: #D47E30; /* Muted orange for phone/email links */
 text-decoration: none;
 }
 a:hover {
-color: #B86A20;
+color: #B86A20; /* Slightly darker on hover for feedback */
 text-decoration: underline;
 }
 
@@ -79,7 +79,7 @@ section {
 margin-bottom: 50px;
 }
 h2 {
-color: #D47E30;
+color: #D47E30; /* Muted orange */
 margin-bottom: 20px;
 padding-bottom: 0;
 border-bottom: none;
@@ -143,22 +143,6 @@ transition: transform 0.3s;
 }
 .gallery img:hover {
 transform: scale(1.03);
-}
-
-/* New styles for the clickable last photo */
-.gallery a {
-display: block;
-text-decoration: none;
-}
-.gallery a img {
-border: 4px solid #D47E30;
-opacity: 0.92;
-transition: all 0.3s ease;
-}
-.gallery a img:hover {
-opacity: 1;
-transform: scale(1.05);
-box-shadow: 0 8px 20px rgba(212, 126, 48, 0.4);
 }
 
 /* Mobile adjustments */
@@ -227,15 +211,12 @@ min-height: 400px;
 
 <h3>Recent Projects</h3>
 <div class="gallery">
-<img src="huttig2.jpg" alt="Commercial painting project – Huttig" loading="lazy">
-<img src="custom matt scott.jpg" alt="Custom commercial storefront painting" loading="lazy">
-<img src="stain better photo.jpg" alt="Exterior wood staining project" loading="lazy">
-<img src="lakewood pre painted.png" alt="Lakewood commercial storefront before painting" loading="lazy">
-<img src="orion2.jpg" alt="Orion commercial storefront painting" loading="lazy">
-<!-- Last photo now links to full gallery -->
-<a href="interior-project-gallery.html" title="Click to see all 10 photos from this interior painting & remodel job">
-<img src="intererior-paint.JPG" alt="Interior painting & remodel project – click for full 10-photo gallery" loading="lazy">
-</a>
+<img src="huttig2.jpg" alt="Commercial" loading="lazy">
+<img src="custom matt scott.jpg" alt="Commercial storefront" loading="lazy">
+<img src="stain better photo.jpg" alt="Stain" loading="lazy">
+<img src="lakewood pre painted.png" alt="Commercial storefront" loading="lazy">
+<img src="orion2.jpg" alt="Commercial storefront" loading="lazy">
+<img src="intererior-paint.JPG" alt="Commercial storefront" loading="lazy">
 </div>
 </section>
 </div>
