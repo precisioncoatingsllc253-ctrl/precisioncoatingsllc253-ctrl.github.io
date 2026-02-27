@@ -13,17 +13,28 @@ line-height: 1.6;
 color: #333;
 background: #f9f9f9;
 }
+
+/* Links - match muted orange theme */
+a {
+color: #D47E30; /* Muted orange for phone/email links */
+text-decoration: none;
+}
+a:hover {
+color: #B86A20; /* Slightly darker on hover for feedback */
+text-decoration: underline;
+}
+
 header {
 background-image: url('cover photo.PNG');
-background-size: cover; /* Keeps it filling without squishing */
-background-position: center; /* Centers it nicely */
+background-size: cover;
+background-position: center;
 background-repeat: no-repeat;
 color: white;
 text-align: center;
-padding: 0; /* Ditch padding—let it breathe full-width */
-height: 80vh; /* Almost full screen: 80% of viewport height */
-min-height: 500px; /* Won't shrink too small on phones */
-position: relative; /* For absolute positioning of h1 */
+padding: 0;
+height: 80vh;
+min-height: 500px;
+position: relative;
 }
 header::before {
 content: '';
@@ -39,62 +50,82 @@ z-index: 2;
 header h1 {
 margin: 0;
 font-size: 3.2em;
-color: #4A2F1B; /* Your new orange */
+color: #4A2F1B;
 position: absolute;
-top: 10px; /* Pulls it near the top—adjust this to hit the clouds */
+top: 10px;
 left: 50%;
-transform: translateX(-50%); /* Centers it horizontally */
- /* Glow for readability */
-z-index: 3; /* Keeps it above the overlay */
+transform: translateX(-50%);
+z-index: 3;
 }
 header p {
 font-size: 1.5em;
 margin: 0;
 position: absolute;
-bottom: 60px; /* Pulls it near the bottom—tweak to 40px or 80px if needed */
+bottom: 60px;
 left: 50%;
-transform: translateX(-50%); /* Centers it */
-text-shadow: 0 2px 6px rgba(0,0,0,0.8); /* Stronger shadow for contrast */
+transform: translateX(-50%);
+text-shadow: 0 2px 6px rgba(0,0,0,0.8);
 z-index: 3;
-max-width: 90%; /* Prevents overflow on mobile */
+max-width: 90%;
 text-align: center;
 }
-.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-section { margin-bottom: 50px; }
-h2 { color: #FF4500; border-bottom: 3px solid #3498db; padding-bottom: 200px; }
+
+.container {
+max-width: 1000px;
+margin: 0 auto;
+padding: 40px 20px;
+}
+section {
+margin-bottom: 50px;
+}
+h2 {
+color: #D47E30; /* ← Changed to muted orange */
+border-bottom: 3px solid #3498db;
+padding-bottom: 10px; /* Fixed excessive 200px → reasonable spacing */
+}
 ul { list-style: none; padding: 0; }
-ul li { background: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+ul li {
+background: #fff;
+margin: 10px 0;
+padding: 15px;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 .contact {
 text-align: center;
 color: white;
 padding: 40px 20px;
 border-radius: 8px;
-
-/* New background image setup */
-background-image: url('odoor.jpg'); /* ← change to your image filename */
-background-size: cover; /* Fills the section fully */
-background-position: center; /* Centers the image */
+background-image: url('odoor.jpg');
+background-size: cover;
+background-position: center;
 background-repeat: no-repeat;
-
-/* Dark overlay so white text stays readable on any photo */
+height: 80vh; /* ← Now matches header height */
+min-height: 500px; /* ← Matches header minimum */
 position: relative;
+margin: 0; /* Remove default margins if needed */
 }
-
 .contact::before {
 content: '';
 position: absolute;
 top: 0; left: 0; right: 0; bottom: 0;
-background: rgba(0, 0, 0, 0.55); /* Darker = better readability; try 0.4–0.7 */
+background: rgba(0, 0, 0, 0.55);
 border-radius: 8px;
 z-index: 1;
 }
-
 .contact > * {
 position: relative;
-z-index: 2; /* Keeps text, links, etc. above the overlay */
+z-index: 2;
 }
 
-footer { text-align: center; padding: 20px; background: #2c3e50; color: white; font-size: 0.9em; }
+footer {
+text-align: center;
+padding: 20px;
+background: #2c3e50;
+color: white;
+font-size: 0.9em;
+}
 
 .gallery {
 display: grid;
@@ -112,47 +143,48 @@ transition: transform 0.3s;
 .gallery img:hover {
 transform: scale(1.03);
 }
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
 header {
 height: 50vh;
 min-height: 300px;
-padding-top: 0; /* No extra space at top */
+padding-top: 0;
 }
 header h1 {
 position: absolute;
-top: 0; /* Right at the top—no gap */
-left: 0; /* Flush left—change to 50% if you still want centered */
-transform: none; /* No centering shift */
+top: 0;
+left: 0;
+transform: none;
 margin: 0;
-padding: 12px 20px; /* Side padding so it doesn't hug edges */
-font-size: 2.0em; /* Readable but not overwhelming */
+padding: 12px 20px;
+font-size: 2.0em;
 color: #4A2F1B;
-background: rgba(255,255,255,0.25); /* Light semi-transparent bar—helps pop without blocking photo */
-border-radius: 0 0 12px 12px; /* Rounded bottom corners for polish */
+background: rgba(255,255,255,0.25);
+border-radius: 0 0 12px 12px;
 text-shadow: 0 0 10px rgba(255,255,255,0.8),
-0 0 20px rgba(74,47,27,0.4); /* Glow stays */
+0 0 20px rgba(74,47,27,0.4);
 z-index: 3;
 white-space: nowrap;
 }
 header p {
 font-size: 1.3em;
-bottom: 40px; /* Tagline stays lower—doesn't fight */
+bottom: 40px;
 left: 50%;
 transform: translateX(-50%);
 max-width: 90%;
 }
-}
- 
+
 .container {
-padding: 20px 10px; /* Less side space */
+padding: 20px 10px;
 }
-
 .gallery {
-grid-template-columns: 1fr; /* One column—stacks pics */
+grid-template-columns: 1fr;
 }
-
 .contact {
-padding: 30px 15px; /* Cozier on small screens */
+padding: 30px 15px;
+height: 60vh; /* Slightly shorter on mobile to avoid too much scroll */
+min-height: 400px;
 }
 }
 </style>
@@ -183,7 +215,7 @@ padding: 30px 15px; /* Cozier on small screens */
 <img src="stain better photo.jpg" alt="Stain" loading="lazy">
 <img src="lakewood pre painted.png" alt="Commercial storefront" loading="lazy">
 <img src="orion2.jpg" alt="Commercial storefront" loading="lazy">
-<img src="intererior-paint.JPG" alt="Commercial storefront" loading="lazy">  
+<img src="intererior-paint.JPG" alt="Commercial storefront" loading="lazy">
 </div>
 </section>
 </div>
